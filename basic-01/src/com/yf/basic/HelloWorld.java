@@ -6,7 +6,7 @@ package com.yf.basic;
  * @author yunfeng
  * @create 2017-09-08 21:22
  * @version V.1.0.
- * @see Hello2  haha
+ * @see HelloWorld  haha
  * @link com.yf.basic.Hello2#haha
  * @docRoot ww
  * @since  jdk1.7
@@ -25,7 +25,7 @@ public class HelloWorld {
      * @deprecated
      * @param num ee
      * @return i  num
-     * @throws exception
+     * @throws Exception
      */
     public int retInt(int num) throws Exception{
         int i = 1;
