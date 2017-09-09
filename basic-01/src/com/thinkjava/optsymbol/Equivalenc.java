@@ -1,4 +1,4 @@
-package com.yf.basic;
+package com.thinkjava.optsymbol;
 
 /**
  * @author yunfeng
