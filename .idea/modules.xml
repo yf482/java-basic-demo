@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/JVM-Performance/JVM-Performance.iml" filepath="$PROJECT_DIR$/JVM-Performance/JVM-Performance.iml" />
       <module fileurl="file://$PROJECT_DIR$/basic-01/basic-01.iml" filepath="$PROJECT_DIR$/basic-01/basic-01.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-basic-demo.iml" filepath="$PROJECT_DIR$/java-basic-demo.iml" />
     </modules>
