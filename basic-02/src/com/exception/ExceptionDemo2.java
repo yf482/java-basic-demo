@@ -1,4 +1,4 @@
- package com.exception;
+package com.exception;
 
 public class ExceptionDemo2 {
 
@@ -8,14 +8,14 @@ public class ExceptionDemo2 {
 	public static void main(String[] args) {
 		Demo d =new Demo();
 		try{
-		d.div(5, 0);
+			d.div(5, 0);
 //		}catch(Exception e){
 //			System.out.println(e.toString());
 //			e.printStackTrace();
 		}catch(ArrayIndexOutOfBoundsException e){
-			System.out.println("����Խ����");
+			System.out.println("数组越界了");
 		}catch(ArithmeticException e){
-			System.out.println("������");
+			System.out.println("除零了");
 		}catch(Exception e){
 			e.printStackTrace();
 		}

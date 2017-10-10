@@ -1,8 +1,8 @@
 package com.exception;
 /*
- * ��Ŀ����֪User�࣬������name��String���ͣ���age��int���ͣ��������ԣ�
- * ���д����ʵ�ָ�ArrayList<User>����Ҫ����User�����age�ĵ�������
-�ϴ������ʱ���������ͼһ���ύ��
+ * 题目：已知User类，该类有name（String类型）和age（int类型）两个属性，
+ * 请编写代码实现给ArrayList<User>排序，要求按照User对象的age的倒序排序。
+上传代码的时候将运算结果截图一起提交。
  * */
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,7 +10,7 @@ import java.util.Comparator;
 import java.util.List;
 public class Test {
  public static void main(String[] args) {
-	 //��ʼ��list<User>
+  //初始化list<User>
   User u1 = new User("zhangsan", 21);
   User u2 = new User("lisi", 12);
   User u3 = new User("wangwu", 11);
@@ -20,16 +20,16 @@ public class Test {
   userList.add(u2);
   userList.add(u3);
   userList.add(u4);
-  System.out.println("�������g��������");
-  //ʹ��Collections.sort������list<User>��������
+  System.out.println("按照年齡倒序排序：");
+  //使用Collections.sort方法对list<User>进行排序
   Collections.sort(userList, new SortByAge());
-  //for��ǿ��� ��ӡuser����
+  //for增强语句 打印user内容
   for (User user : userList) {
    System.out.println(user.getName() + " --- " + user.getAge());
   }
  }
 }
-//����Ƚ���
+//构造比较器
 class SortByAge implements Comparator {
  public int compare(Object o1, Object o2) {
   User s1 = (User) o1;
@@ -42,7 +42,7 @@ class SortByAge implements Comparator {
   return 1;
  }
 }
-//user��
+//user类
 class User{
  private int age;
  private String name;

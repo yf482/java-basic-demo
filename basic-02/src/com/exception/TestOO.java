@@ -1,10 +1,10 @@
 package com.exception;
 
 /*
- * ����java����������˼���ô��������������ݣ�С�죨Ů���аְֺ����裬
- * �ְֺ�����ֱ����Լ��İְֺ����衣������С��İְֻ�������A��B��С��������������C��D��
- * Ҫ�󣺽�������龰��Java����������Ҫ���Լ�������ӿںͶ���
- * 
+ * 请用java中面向对象的思想用代码描述如下内容：小红（女）有爸爸和妈妈，
+ * 爸爸和妈妈分别有自己的爸爸和妈妈。。。，小红的爸爸会做工作A和B，小红的妈妈会做工作C和D。
+ * 要求：将上面的情景用Java类来描述，要求自己抽象出接口和对象。
+ *
  * */
 
 public class TestOO {
@@ -17,7 +17,7 @@ public class TestOO {
 		XiaoHongFather xf = new XiaoHongFather("xhFather");
 		XiaoHongMother xm = new XiaoHongMother("xhMother");
 		XiaoHong xh = new XiaoHong("xiaohong", xf, xm);
-		
+
 		xh.father.WorkA();
 		xh.father.WorkB();
 		xh.mother.WorkC();
@@ -32,7 +32,7 @@ abstract class People{
 	Mother mother=null;
 }
 interface Father{
-	
+
 	void WorkA();
 	void WorkB();
 }
@@ -45,49 +45,49 @@ class XiaoHongFather extends People implements Father {
 
 	XiaoHongFather(String name){
 		this.name=name;
-		
+
 	}
-	
+
 	@Override
 	public void WorkA() {
 		// TODO Auto-generated method stub
-		System.out.println("С��ְ�WorkA");
+		System.out.println("小红爸爸WorkA");
 	}
 
 	@Override
 	public void WorkB() {
 		// TODO Auto-generated method stub
-		System.out.println("С��ְ�WorkB");
+		System.out.println("小红爸爸WorkB");
 	}
-	
+
 }
 
 class XiaoHongMother extends People implements Mother {
-	
+
 	XiaoHongMother(String name){
 		this.name=name;
-		
+
 	}
 	@Override
 	public void WorkC() {
 		// TODO Auto-generated method stub
-		System.out.println("С������WorkC");
+		System.out.println("小红妈妈WorkC");
 	}
 
 	@Override
 	public void WorkD() {
 		// TODO Auto-generated method stub
-		System.out.println("С������WorkD");
+		System.out.println("小红妈妈WorkD");
 	}
-	
+
 }
 
 class XiaoHong extends People{
-	
+
 	XiaoHong(String name ,Father father,Mother mother){
 		this.father=father;
 		this.name=name;
 		this.mother=mother;
 	}
-	
+
 }

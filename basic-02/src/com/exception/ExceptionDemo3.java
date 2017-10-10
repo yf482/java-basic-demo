@@ -14,7 +14,7 @@ public class ExceptionDemo3 {
 		} catch (FuShuException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("���ֳ����Ǹ���");
+			System.out.println("出现除数是负数");
 		}
 
 	}
@@ -33,13 +33,13 @@ class FuShuException extends Exception{
 	public int  getValue(){
 		return value;
 	}
-	
+
 }
 
 class  Demo2{
-	//thorw�������쳣�����庯���ڣ�throws�����������⣬����Ӷ���쳣����
+	//thorw后面是异常对象定义函数内，throws定义在行数外，后面接多个异常对象
 	int div(int a,int b) throws FuShuException{
-		if(b<0)throw new FuShuException("�����˸������",b);
+		if(b<0)throw new FuShuException("出现了负数除数",b);
 		return a/b;
 	}
 }

@@ -9,7 +9,7 @@ public class ExceptionTest1 {
 		// TODO Auto-generated method stub
 		Rec rec=null;
 //		try {
-			rec = new Rec(-3, 4);
+		rec = new Rec(-3, 4);
 //		} catch (NoValueException e) {
 //			// TODO Auto-generated catch block
 ////			e.printStackTrace();
@@ -27,7 +27,7 @@ class Rec implements Shape{
 	private int len, wid;
 	Rec(int len ,int wid){//throws NoValueException{
 		if(len<=0||wid<=0)
-			throw new NoValueException("���ַǷ�ֵ");
+			throw new NoValueException("出现非法值");
 		this.len=len;
 		this.wid=wid;
 	}

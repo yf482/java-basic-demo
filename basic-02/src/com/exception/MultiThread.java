@@ -7,36 +7,36 @@ public class MultiThread {
 	 */
 	public static void main(String[] args) {
 		new Thread(new Thread1()).start();
-		
+
 		try {
 			Thread.sleep(10);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+
 		new Thread(new Thread2()).start();
-		
-		
-		
-		
+
+
+
+
 	}
-	
+
 	private static class Thread1 implements Runnable
 	{
 
 		@Override
 		public void run() {
-			/*���������Thread1�������Thread2�ڲ���run������ͬһ������Ϊ������
-			�������ﲻ����this����Ϊ��thread2�����his�����Thread1��this����ͬһ������
-			������MultiThread.class ����ֽ�����󣬵�ǰ�������������������ǣ�ָ��Ķ���ͬһ������
+			/*由于这里的Thread1和下面的Thread2内部的run方法用同一对象作为监视器
+			我们这里不能用this，因为在thread2里面的his和这个Thread1的this不是同一个对象
+			我们用MultiThread.class 这个字节码对象，当前虚拟机黎引用这个变量是，指向的都是同一个对象
 			*/
 			synchronized (MultiThread.class) {
 				System.out.println("enter thread1");
 				System.out.println("thread1 is waiting");
-				
+
 				/*
-				 * �ͷ��������ַ�ʽ����һ�ַ�ʽ�ǳ�����Ȼ�뿪�������ķ�Χ��Ҳ�����뿪��synchronized�ؼ��ֹ�Ͻ
-				 * �Ĵ��뷶Χ�������з�ʽ������synchronized�ؼ��ӹ�Ͻ�Ĵ����ڲ����ü����������wait����������ʹ��wait�����ͷ���
+				 * 释放锁有两种方式，第一种方式是程序自然离开监视器的范围，也就是离开了synchronized关键字管辖
+				 * 的代码范围，临沂中方式就是在synchronized关键子管辖的代码内部调用监视器对象的wait方法。这里使用wait方法释放锁
 				 * */
 				try {
 					MultiThread.class.wait();
@@ -46,41 +46,41 @@ public class MultiThread {
 				}
 				System.out.println("thread1 is going on...");
 				System.out.println("thread1 is being over!");
-				
+
 			}
-			
+
 		}
-		
+
 	}
-	
+
 	private static class Thread2 implements Runnable{
 
 		@Override
 		public void run() {
-			
+
 			synchronized (MultiThread.class) {
 				System.out.println("enter thread2...");
 				System.out.println("thread2 notify other thread can release wait status..");
-			MultiThread.class.notify();
-			System.out.println(" thread2 is sleeping ten millisecond");
+				MultiThread.class.notify();
+				System.out.println(" thread2 is sleeping ten millisecond");
 			/*
-			 * ����notify�����ͷ���
-			 * ��ʱthread2���������sleep������Ϣ��10���룬��thread1��Ȼ����ִ�У�
-			 * ��Ϊthread2û���ͷ���
-			 * ����thread1�޷��ò�����
+			 * 由于notify并不释放锁，
+			 * 及时thread2调用下面的sleep方法休息了10毫秒，但thread1仍然不会执行，
+			 * 因为thread2没有释放锁，
+			 * 所以thread1无法得不到锁
 			 * */
-			
-			try {
-				Thread.sleep(10);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			System.out.println("thread2 is going on...");
-			System.out.println("thread2 is being over!");
+
+				try {
+					Thread.sleep(10);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				System.out.println("thread2 is going on...");
+				System.out.println("thread2 is being over!");
 			}
 		}
-		
+
 	}
 
 }
