@@ -1,16 +1,17 @@
-	package com.post;
+package com.util.post;
 
 import net.sf.json.JSONObject;
-
-import org.apache.log4j.Logger;
-//import org.apache.commons.httpclient.HttpStatus;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import org.apache.log4j.Logger;
+
 import java.io.IOException;
 import java.net.URLDecoder;
+
+//import org.apache.commons.httpclient.HttpStatus;
 
 public class HttpRequestUtils {
 	private static final Logger logger = Logger

@@ -14,7 +14,7 @@ public class HashMapTest {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         /*
-		HashMap<String,HashMap<String,String>>  czbk =new HashMap<String,HashMap<String,String>>();
+        HashMap<String,HashMap<String,String>>  czbk =new HashMap<String,HashMap<String,String>>();
 		
 		HashMap<String,String>  yuyeban =new HashMap<String,String>();
 		HashMap<String,String>  jiuyeban=new HashMap<String,String>();

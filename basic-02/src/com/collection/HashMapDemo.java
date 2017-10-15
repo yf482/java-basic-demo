@@ -4,11 +4,8 @@ import java.util.*;
 
 public class HashMapDemo {
 
-    /**
-     * @param args
-     */
+
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         //put会返回键对应原来的值，第一次返回null.添加相同的键，后添加的值会覆盖原有的键对应的值
         Map<String, String> map = new HashMap<String, String>();
         System.out.println("put:" + map.put("01", "zhangsan1"));
@@ -40,11 +37,8 @@ public class HashMapDemo {
             System.out.println("key:" + key + "---value:" + value);
         }
         //2.将Map集合中映射关系复制到entrySet()
-
         Set<Map.Entry<String, String>> entrySet = map.entrySet();
-
         Iterator<Map.Entry<String, String>> it2 = entrySet.iterator();
-
         while (it2.hasNext()) {
             Map.Entry<String, String> me = it2.next();
             String key = me.getKey();

@@ -1,8 +1,10 @@
-package com.post;
-import java.io.IOException;
+package com.util.post;
+
+import net.sf.json.JSONObject;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.methods.PostMethod;
-import net.sf.json.JSONObject;
+
+import java.io.IOException;
 
 public class PostJsonRequest {
 	
