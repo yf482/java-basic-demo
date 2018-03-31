@@ -1,28 +1,15 @@
 package com.util.post;
 
-import net.sf.json.JSONObject;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
-import org.apache.log4j.Logger;
-
-import java.io.IOException;
-import java.net.URLDecoder;
-
 //import org.apache.commons.httpclient.HttpStatus;
 
 public class HttpRequestUtils {
-	private static final Logger logger = Logger
-			.getLogger(HttpRequestUtils.class);
 
 	/**
 	 * httpPost
 	 * @param url      路径
 	 * @param jsonParam     参数
 	 * @return
-	 */
+	 *//*
 
 	public static JSONObject httpPost(String url, JSONObject jsonParam) {
 
@@ -30,14 +17,14 @@ public class HttpRequestUtils {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * post请求
 	 * @param url   url地址
 	 * @param jsonParam     参数
 	 * @param noNeedResponse      不需要返回结果
 	 * @return
-	 */
+	 *//*
 
 	public static JSONObject httpPost(String url, JSONObject jsonParam,
 			boolean noNeedResponse) {
@@ -72,7 +59,7 @@ public class HttpRequestUtils {
 
 			url = URLDecoder.decode(url, "UTF-8");
 
-			/** 请求发送成功，并得到响应 **/ 
+			*//** 请求发送成功，并得到响应 **//*
 
 			if (result.getStatusLine().getStatusCode() == 200) {
 
@@ -80,7 +67,7 @@ public class HttpRequestUtils {
 
 				try {
 
-					/** 读取服务器返回过来的json字符串数据 **/
+					*//** 读取服务器返回过来的json字符串数据 **//*
 
 					str = EntityUtils.toString(result.getEntity());
 
@@ -90,7 +77,7 @@ public class HttpRequestUtils {
 
 					}
 
-					/** 把json字符串转换成json对象 **/
+					*//** 把json字符串转换成json对象 **//*
 
 					jsonResult = JSONObject.fromObject(str);
 
@@ -110,7 +97,7 @@ public class HttpRequestUtils {
 
 		return jsonResult;
 
-	}
+	}*/
 
 	/**
 	 * 
