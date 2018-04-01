@@ -35,6 +35,11 @@ public class ResourceLock implements ResourceIn {
         }
     }
 
+    @Override
+    public void set(String name, String sex) {
+
+    }
+
     public void out() {
         lock.lock();
         try {

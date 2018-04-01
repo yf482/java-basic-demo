@@ -6,6 +6,11 @@ public class Resource2 implements ResourceIn {
     private boolean flag = false;
 
 
+    @Override
+    public void set(String name, String sex) {
+
+    }
+
     public synchronized void set(String name) {
         //while(!flag){
         if (flag) {

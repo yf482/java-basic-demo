@@ -17,5 +17,19 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://D:/stanford-segmenter-2018-02-27" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://D:/stanford-segmenter-2018-02-27" />
+          <root url="file://D:/stanford-segmenter-2018-02-27" />
+        </SOURCES>
+        <jarDirectory url="file://D:/stanford-segmenter-2018-02-27" recursive="false" />
+        <jarDirectory url="file://D:/stanford-segmenter-2018-02-27" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>

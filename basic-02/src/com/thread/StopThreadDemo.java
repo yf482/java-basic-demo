@@ -6,7 +6,6 @@ public class StopThreadDemo {
      * @param args
      */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         StopThread st = new StopThread();
         Thread t1 = new Thread(st);
         Thread t2 = new Thread(st);
@@ -18,8 +17,6 @@ public class StopThreadDemo {
         t2.start();
         int num = 0;
         while (true) {
-
-
             if (num++ == 60) {
                 t1.interrupt();
                 t2.interrupt();
@@ -47,13 +44,11 @@ class StopThread implements Runnable {
 
     @Override
     public synchronized void run() {
-        // TODO Auto-generated method stub
 
         while (flag) {
             try {
                 wait();
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 System.out.println(Thread.currentThread().getName() + "---Exception");
                 flag = false;
             }

@@ -44,7 +44,7 @@ public class HttpFileDownload {
 
     public static void main(String[] args) {
         String fileUrl = "http://www.google.cn/intl/zh-CN/images/logo_cn.gif";
-        String fileName = "test.gif";
+        String fileName = "nlp.gif";
         try {
             System.out.println(getRemoteFile(fileUrl, fileName));
         } catch (IOException e) {
