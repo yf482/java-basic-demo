@@ -20,6 +20,11 @@ class Resource implements ResourceIn {
         this.notify();
     }
 
+    @Override
+    public void set(String name) {
+
+    }
+
 
     public synchronized void out() {
         if (!flag) {
@@ -35,9 +40,5 @@ class Resource implements ResourceIn {
     }
 
 
-    @Override
-    public void set(String name) {
-        // TODO Auto-generated method stub
 
-    }
 }

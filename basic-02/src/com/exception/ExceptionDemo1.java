@@ -2,42 +2,44 @@ package com.exception;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class ExceptionDemo1 {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
 
-	}
+    }
 
-	public void readFile3(String file)
-	{
-		BufferedReader reader = null;
-		Connection conn = null;
+    public void readFile3(String file) {
+        BufferedReader reader = null;
+        Connection conn = null;
 
-		try{
-			reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+        try {
+            reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+            conn = DriverManager.getConnection("");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                reader.close();
+                conn.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
-			conn = DriverManager.getConnection("");
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
-			try {
-				reader.close();
-				conn.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-	}
+    //不throws 和 try 没关系
+    public void readArr() throws ArrayIndexOutOfBoundsException {
+        int[] a = new int[4];
+        int[] b = {1, 2, 3, 4};
+        int c = b[4];//没有抛出数组越界异常
+    }
 
 }
 /*

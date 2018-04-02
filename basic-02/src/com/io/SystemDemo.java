@@ -8,7 +8,7 @@ public class SystemDemo {
      * @param args
      */
     /*
-	 *  System类中的方法和属性都是静态的
+     *  System类中的方法和属性都是静态的
 	 *  out标准输出默认是控制台
 	 *  in,标准输入，默认是键盘
 	 *
