@@ -4,10 +4,10 @@ package com.post;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.apache.log4j.Logger;
-import org.junit.Test;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import org.apache.log4j.Logger;
+import org.junit.Test;
 
 public class PostTest {
 	 private static Logger logger = Logger.getLogger(PostTest.class);
