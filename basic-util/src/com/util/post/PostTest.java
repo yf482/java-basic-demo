@@ -1,13 +1,22 @@
 package com.util.post;
 
 
+<<<<<<< HEAD:basic-util/src/com/post/PostTest.java
+import java.util.ArrayList;
+import java.util.HashMap;
+
+=======
+>>>>>>> 3ac7d94f32c693f3d2491c8d2aa9300742f5d5a9:basic-util/src/com/util/post/PostTest.java
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 import org.junit.Test;
+<<<<<<< HEAD:basic-util/src/com/post/PostTest.java
+=======
 
 import java.util.ArrayList;
 import java.util.HashMap;
+>>>>>>> 3ac7d94f32c693f3d2491c8d2aa9300742f5d5a9:basic-util/src/com/util/post/PostTest.java
 
 public class PostTest {
 	 private static Logger logger = Logger.getLogger(PostTest.class);
