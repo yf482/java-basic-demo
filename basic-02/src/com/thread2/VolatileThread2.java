@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @create 2018-04-01 19:12
  **/
 public class VolatileThread2 extends Thread {
-    //    private static volatile int count = 0;
+    //    private statiproxy volatile int count = 0;
     private static AtomicInteger count = new AtomicInteger(0);
 
     @Override

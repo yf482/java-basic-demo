@@ -11,7 +11,7 @@ public class HttpRequestUtils {
 	 * @return
 	 *//*
 
-	public static JSONObject httpPost(String url, JSONObject jsonParam) {
+	public statiproxy JSONObject httpPost(String url, JSONObject jsonParam) {
 
 		return httpPost(url, jsonParam, false);
 
@@ -26,7 +26,7 @@ public class HttpRequestUtils {
 	 * @return
 	 *//*
 
-	public static JSONObject httpPost(String url, JSONObject jsonParam,
+	public statiproxy JSONObject httpPost(String url, JSONObject jsonParam,
 			boolean noNeedResponse) {
 
 		// post请求返回结果
@@ -106,7 +106,7 @@ public class HttpRequestUtils {
 	 * @return
 	 */
 
-	/*public static JSONObject httpGet(String url) {
+	/*public statiproxy JSONObject httpGet(String url) {
 
 		// get请求返回结果
 

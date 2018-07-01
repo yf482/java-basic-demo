@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/basic-01/basic-01.iml" filepath="$PROJECT_DIR$/basic-01/basic-01.iml" />
       <module fileurl="file://$PROJECT_DIR$/basic-02/basic-02.iml" filepath="$PROJECT_DIR$/basic-02/basic-02.iml" />
       <module fileurl="file://$PROJECT_DIR$/basic-util/basic-util.iml" filepath="$PROJECT_DIR$/basic-util/basic-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design-mode/design-mode.iml" filepath="$PROJECT_DIR$/design-mode/design-mode.iml" />
     </modules>
   </component>
 </project>

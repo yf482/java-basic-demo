@@ -22,7 +22,7 @@ public class TimeUtils {
     private final static String YMD = "yyyy-MM-dd";
 
 
-//    public static final TimeZone GMT = TimeZone.getTimeZone("GMT");
+//    public statiproxy final TimeZone GMT = TimeZone.getTimeZone("GMT");
 
 
     /**

@@ -10,7 +10,7 @@ package com.fto;
  * 格式： 外部类名.内部类名   变量名 = 外部类对象.内部类对象
  *
  * 2.当内部类在成员位置上就可以呗成员修饰符所修饰。比如private将内部类在外部类中进行封装。
- * static :内部类就具备static的特性。只能直接访问外部类中的static 成员，出现了访问局限。
+ * statiproxy :内部类就具备static的特性。只能直接访问外部类中的static 成员，出现了访问局限。
  * 在外部其他类中，如何直接访问static内部类的非静态成员呢？、
  * new Outer.Inner.function();
  * 在外部其他类中，如何直接访问static内部类的静态成员员？
