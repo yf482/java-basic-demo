@@ -19,7 +19,7 @@ public class MyReflect {
      */
     @Before
     public void init() throws Exception {
-        className = "cn.itcast_04_reflect.Person";
+        className = "com.reflect.Person";
         personClass = Class.forName(className);
     }
 
@@ -120,12 +120,24 @@ public class MyReflect {
     @SuppressWarnings("unchecked")
     @Test
     public void getPrivateMethod() throws Exception {
+        Constructor constructor = personClass.getConstructor(Long.class);
+        Object cs = constructor.newInstance(100L);
+        System.out.println("cs = " + cs);
         Object obj = personClass.newInstance();//获取空参的构造函数
         Method method = personClass.getDeclaredMethod("getSomeThing");
         method.setAccessible(true);
         Object value = method.invoke(obj);
         System.out.println(value);
 
+    }
+
+    @Test
+    public void test() throws Exception {
+        Object obj = personClass.newInstance();
+        Method method = personClass.getDeclaredMethod("getSomeThing");
+        method.setAccessible(true);
+        Object ss = method.invoke(obj);
+        System.out.println("ss = " + ss);
     }
 
     /**
@@ -155,11 +167,11 @@ public class MyReflect {
 
         //判断当前的Class对象表示是否是枚举类
         System.out.println(personClass.isEnum());
-        System.out.println(Class.forName("cn.itcast_04_reflect.City").isEnum());
+        System.out.println(Class.forName("com.reflect.City").isEnum());
 
         //判断当前的Class对象表示是否是接口
         System.out.println(personClass.isInterface());
-        System.out.println(Class.forName("cn.itcast_04_reflect.TestInterface").isInterface());
+        System.out.println(Class.forName("com.reflect.TestInterface").isInterface());
 
 
     }

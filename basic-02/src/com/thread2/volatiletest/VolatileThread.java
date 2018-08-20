@@ -1,4 +1,4 @@
-package com.thread2;
+package com.thread2.volatiletest;
 
 /**
  * volatile 线程共享变量
@@ -10,8 +10,8 @@ package com.thread2;
  * @create 2018-04-01 19:12
  **/
 public class VolatileThread extends Thread {
-    //    private boolean isRunning = true;
-    private volatile boolean isRunning = true;
+        private boolean isRunning = true;
+//    private volatile boolean isRunning = true;
 
     public boolean isRunning() {
         return isRunning;
@@ -42,6 +42,7 @@ public class VolatileThread extends Thread {
         try {
             Thread.sleep(1000);
             t1.setRunning(false);
+//            t1.isRunning = false;
             boolean is = t1.isRunning();
             System.out.println("is = " + is);
 

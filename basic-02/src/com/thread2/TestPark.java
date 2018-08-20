@@ -28,6 +28,7 @@ public class TestPark {
                     System.out.println("我已经到达酒店");
                     LockSupport.park();
                     System.out.println("确认过眼神，我遇上对的人");
+                    Thread.sleep(1000L);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -47,7 +48,13 @@ public class TestPark {
             }
         });
 
+
         thread.start();
         thread2.start();
+        try {
+            Thread.sleep(3000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

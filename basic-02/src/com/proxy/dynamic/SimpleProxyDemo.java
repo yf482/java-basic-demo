@@ -15,6 +15,12 @@ public class SimpleProxyDemo {
         IProxyClass proxyClass = (IProxyClass)proxyHandler.newProxyInstance();
         System.out.println(proxyClass.getClass().getName());
         System.out.println(proxyClass.doSomething(5));
+
+
+        /*DynamicProxyHandler proxyHandler2 = new DynamicProxyHandler();
+        IProxyClass proxyClass2 = (IProxyClass)proxyHandler2.newProxyInstance();
+        System.out.println(proxyClass2.getClass().getName());
+        System.out.println(proxyClass2.doSomething(5));*/
     }
 
 }

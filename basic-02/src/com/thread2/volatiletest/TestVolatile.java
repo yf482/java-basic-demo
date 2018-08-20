@@ -13,14 +13,15 @@ public class TestVolatile {
                 @Override
                 public void run() {
                     for (int i = 0; i < 1000; i++) {
-                        numb++;
+                        //numb++;
+                        ++numb;
                     }
                 }
             }).start();
 
         }
 
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         System.out.println(numb);
     }
 

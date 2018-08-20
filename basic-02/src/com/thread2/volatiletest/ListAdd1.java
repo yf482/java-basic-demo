@@ -1,4 +1,4 @@
-package com.thread2;
+package com.thread2.volatiletest;
 
 import java.util.ArrayList;
 import java.util.List;

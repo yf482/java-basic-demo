@@ -15,15 +15,18 @@ public class MyLockTest {
                 Thread thread = Thread.currentThread();
 
                 lock.lock();
+                lock.lock();
                 try {
                     System.out.println(thread.getName() + "得到了锁");
                     for (int i = 0; i < 5; i++) {
                         arrayList.add(i);
+                        Thread.sleep(500);
                     }
                 } catch (Exception e) {
                 } finally {
                     System.out.println(thread.getName() + "释放了锁");
                     System.out.println("arrayList = " + arrayList.toString());
+                    lock.unlock();
                     lock.unlock();
                 }
 
@@ -40,6 +43,7 @@ public class MyLockTest {
                     System.out.println(thread.getName() + "得到了锁");
                     for (int i = 0; i < 5; i++) {
                         arrayList.add(i);
+                        Thread.sleep(500);
                     }
                 } catch (Exception e) {
                 } finally {
@@ -49,7 +53,6 @@ public class MyLockTest {
                 }
 
             }
-
             ;
         }.start();
     }

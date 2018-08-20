@@ -13,7 +13,7 @@ public class TestClient {
         InputStream in = socket.getInputStream();
 
         PrintWriter pw = new PrintWriter(new BufferedOutputStream(out));
-        pw.println("cn.itcast_04_reflect.rpc.TestBusiness:getPrice:yifu");
+        pw.println("com.reflect.socket.TestBusiness:getPrice:yifu");
         pw.flush();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(in));

@@ -1,5 +1,7 @@
 package com.thread2;
 
+import java.util.Random;
+
 public class DubbleSingleton {
 
     private static DubbleSingleton ds;
@@ -8,16 +10,20 @@ public class DubbleSingleton {
         if (ds == null) {
             try {
                 //模拟初始化对象的准备时间...
-                Thread.sleep(3000);
+                int sec = Math.abs(new Random().nextInt()) % 1000;
+                System.out.println("sec = " + sec);
+                Thread.sleep(sec);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            synchronized (DubbleSingleton.class) {
+            /*synchronized (DubbleSingleton.class) {
                 if (ds == null) {
                     ds = new DubbleSingleton();
                 }
-            }
+            }*/
+            ds = new DubbleSingleton();
         }
+        System.out.println("ds = " + ds);
         return ds;
     }
 
@@ -44,6 +50,7 @@ public class DubbleSingleton {
         t1.start();
         t2.start();
         t3.start();
+
     }
 
 }

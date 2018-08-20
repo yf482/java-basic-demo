@@ -11,6 +11,7 @@ public class TestServer {
         server.bind(new InetSocketAddress("localhost", 9898));
         while (true) {
             Socket socket = server.accept();
+            System.out.println("socket = " + socket.toString());
             new Thread(new TestServerTask(socket)).start();
         }
     }

@@ -1,4 +1,4 @@
-package com.thread2;
+package com.thread2.volatiletest;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -18,7 +18,7 @@ public class VolatileThread2 extends Thread {
 
     @Override
     public void run() {
-        test2();
+        test1();
     }
 
     public void test1() {
