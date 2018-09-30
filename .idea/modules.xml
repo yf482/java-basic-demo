@@ -7,6 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/basic-02/basic-02.iml" filepath="$PROJECT_DIR$/basic-02/basic-02.iml" />
       <module fileurl="file://$PROJECT_DIR$/basic-util/basic-util.iml" filepath="$PROJECT_DIR$/basic-util/basic-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/design-mode/design-mode.iml" filepath="$PROJECT_DIR$/design-mode/design-mode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-demo.iml" filepath="$PROJECT_DIR$/java-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic-util/java-demo (1).iml" filepath="$PROJECT_DIR$/basic-util/java-demo (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/jvm-performance/jvm-perfomance.iml" filepath="$PROJECT_DIR$/jvm-performance/jvm-perfomance.iml" />
     </modules>
   </component>
 </project>

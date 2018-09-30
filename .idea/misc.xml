@@ -3,6 +3,18 @@
   <component name="EncodingComponent">
     <option name="projectEncoding" />
   </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/JVM-Performance/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-01/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-util/pom.xml" />
+        <option value="$PROJECT_DIR$/basic-02/pom.xml" />
+        <option value="$PROJECT_DIR$/design-mode/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
