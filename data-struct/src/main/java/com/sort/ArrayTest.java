@@ -159,6 +159,16 @@ public class ArrayTest {
         return arr;
     }
 
+    //反转数组
+    public static int[] reverseArray2(int[] arr) {
+        int n = arr.length - 1;
+        int [] arr2 = new int[n];
+        for (int i = 0; i<n; i--) {
+            arr2[i] = arr [n-i];
+        }
+        return arr2;
+    }
+
 }
 
 

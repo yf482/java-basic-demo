@@ -11,7 +11,7 @@ import java.util.Arrays;
  * @author v_wbyfli
  * @version 1.1
  */
-public class ArraySort {
+public class BubbleSort {
 
     /**
      * @param args
@@ -24,13 +24,11 @@ public class ArraySort {
 //		Arrays.sort(arr);
         bubbleSort(arr);
         printArr(arr);
-
 //		int index = binarySort(arr,5);
         int index = Arrays.binarySearch(arr, 5);
         System.out.println(index);
 
         //二分查找
-
     }
 
     /**
@@ -65,32 +63,7 @@ public class ArraySort {
 
     }
 
-    /**
-     * 二分查询
-     *
-     * @param arr
-     * @param key
-     * @return
-     */
-    public static int binarySort(int[] arr, int key) {
 
-        int max, min, mid;
-        min = 0;
-        max = arr.length;
-        mid = (max + min) / 2;
-        while (arr[mid] != key) {
-            if (key > arr[mid])
-                min = mid + 1;
-            else if (key < arr[mid])
-                max = mid - 1;
-            if (max < min)
-                return -1;
-            mid = (max + mid) / 2;
-
-        }
-        return mid;
-
-    }
 
     /**
      * @param arr
@@ -98,11 +71,12 @@ public class ArraySort {
     public static void printArr(int[] arr) {
         System.out.print("[");
         for (int x = 0; x < arr.length; x++) {
-            if (x != arr.length - 1)
+            if (x != arr.length - 1){
                 System.out.print(arr[x] + ",");
-            else
+            }
+            else{
                 System.out.println(arr[x] + "]");
-
+            }
         }
     }
 

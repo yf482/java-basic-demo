@@ -6,6 +6,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>basic-01</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>../data-struct</module>
+    </modules>
     <modelVersion>4.0.0</modelVersion>
 
     <dependencies>

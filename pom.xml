@@ -9,6 +9,7 @@
         <module>basic-01</module>
         <module>basic-02</module>
         <module>basic-util</module>
+        <module>data-struct</module>
         <module>design-mode</module>
         <module>jvm-performance</module>
     </modules>
