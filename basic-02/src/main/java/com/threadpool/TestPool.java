@@ -34,7 +34,12 @@ public class TestPool {
 
     public void test2() {
         BlockingQueue<Integer> blockingQueue = new LinkedBlockingQueue<>(10);
-//        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(2,10,1000,TimeUnit.SECONDS,blockingQueue);
+        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(2,10,1000,TimeUnit.SECONDS,blockingQueue);
+    }
+
+    public void test2() {
+        BlockingQueue<Integer> blockingQueue = new LinkedBlockingQueue<>(10);
+        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(2,10,1000,TimeUnit.SECONDS,blockingQueue,new ThreadPoolExecutor.AbortPolicy());
     }
 
     @Test
