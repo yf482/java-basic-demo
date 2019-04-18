@@ -2,3 +2,4 @@
 out/
 java-basic-demo.iml
 *.iml
+*/target
